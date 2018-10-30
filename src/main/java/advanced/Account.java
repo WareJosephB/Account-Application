@@ -4,10 +4,12 @@ public class Account {
 
 	private String firstName;
 	private String lastName;
+	private int accountNumber;
 
-	Account(String firstName, String lastName) {
+	Account(String firstName, String lastName, int accountNumber) {
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.accountNumber = accountNumber;
 	}
 
 	public String getFirstName() {
@@ -26,8 +28,9 @@ public class Account {
 		this.lastName = lastName;
 	}
 
+	@Override
 	public String toString() {
-		return this.lastName + ", " + this.firstName;
+		return this.accountNumber + ": " + this.lastName + ", " + this.firstName;
 	}
 
 }

@@ -3,11 +3,14 @@ package advanced;
 import java.util.HashMap;
 import java.util.Map;
 
-public class service {
+public class Service {
+	
+	private static int accountNumber = 1;
+	private static Map<Integer, Account> accountList = new HashMap<>();
 
-	private static int N = 1;
+	private Service() {}
+	
 
-	private static Map<Integer, Account> accountList = new HashMap<Integer, Account>();
 
 	public static Account getAccountByAccountNumber(int accountNumber) {
 		return accountList.get(accountNumber);
@@ -15,8 +18,8 @@ public class service {
 
 	public static void addAccount(String firstName, String secondName) {
 
-		accountList.put(N, new Account(firstName, secondName));
-		N++;
+		accountList.put(accountNumber, new Account(firstName, secondName, accountNumber));
+		accountNumber++;
 
 	}
 
