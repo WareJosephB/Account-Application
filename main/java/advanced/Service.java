@@ -31,4 +31,18 @@ public class Service {
 		return accountNumber + ": " + getAccountByAccountNumber(accountNumber).toString();
 		
 	}
+
+
+
+	public static int getCountByName(String name) {
+		int count = 0;
+		int stepper = 1;
+		while (stepper < accountNumber) {
+			if (accountList.get(stepper).getFirstName().equals(name)) {
+				count ++;
+			}
+			stepper ++;
+		}
+		return count;
+	}
 }
