@@ -1,7 +1,9 @@
-package advanced;
+package com.qa.util;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import com.qa.domain.persistence.Account;
 
 public class Service {
 

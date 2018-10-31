@@ -1,4 +1,4 @@
-package advanced;
+package com.qa.util;
 
 import java.util.Scanner;
 

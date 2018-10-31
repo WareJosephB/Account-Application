@@ -1,4 +1,4 @@
-package advanced;
+package com.qa.domain.persistence;
 
 public class Account {
 
@@ -6,7 +6,7 @@ public class Account {
 	private String lastName;
 	private int accountNumber;
 
-	Account(String firstName, String lastName, int accountNumber) {
+	public Account(String firstName, String lastName, int accountNumber) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.accountNumber = accountNumber;
