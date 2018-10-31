@@ -1,12 +1,20 @@
-package advanced;
+package com.qa.domain.persistence;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Account {
 
 	private String firstName;
 	private String lastName;
-	private int accountNumber;
+	private String accountNumber;
+	@Id @GeneratedValue (strategy = GenerationType.IDENTITY)
+	private int id;
 
-	Account(String firstName, String lastName, int accountNumber) {
+	public Account(String firstName, String lastName, String accountNumber) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.accountNumber = accountNumber;

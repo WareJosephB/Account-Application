@@ -1,6 +1,7 @@
-import advanced.Service;
 import org.junit.Assert;
 import org.junit.Test;
+
+import com.qa.util.Service;
 
 public class AccountTest {
 
@@ -13,9 +14,9 @@ public class AccountTest {
 		Service.addAccount("John", "Brown");
 		Service.addAccount("Jon", "Bamber");
 		
-		int actual = Service.getCountByName("John");
+		int actual = Service.getCountByName("Jon");
 		
-		Assert.assertEquals(2, actual);
+		Assert.assertEquals(1, actual);
 		
 	}
 

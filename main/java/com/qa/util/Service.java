@@ -1,11 +1,13 @@
-package advanced;
+package com.qa.util;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import com.qa.domain.persistence.Account;
+
 public class Service {
 
-	private static int accountNumber = 1;
+	private static int accountNumber = 1001;
 	private static Map<Integer, Account> accountList = new HashMap<>();
 
 	private Service() {
@@ -17,7 +19,7 @@ public class Service {
 
 	public static void addAccount(String firstName, String secondName) {
 
-		accountList.put(accountNumber, new Account(firstName, secondName, accountNumber));
+		accountList.put(accountNumber, new Account(firstName, secondName, Integer.toString(accountNumber)));
 		accountNumber++;
 
 	}
